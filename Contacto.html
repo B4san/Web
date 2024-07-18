@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotos</title>
+    <title>Contacto</title>
     <link rel="icon" href="imagenes/favicon.png" type="image/png" sizes="16x16">
     <link rel="stylesheet" href="Css/Miestilos.css">
 </head>
-
 <body>
     <div class="titulo">
         <header>
@@ -21,8 +19,50 @@
                 <a href="index.html">Inicio | </a>
                 <a href="Fotos.html">Fotos | </a>
                 <a href="Videos.html">Videos | </a>
-                <a href="Contacto.html">Contacto  </a>
+                <a href="Contacto.html">Contacto </a>
             </nav>
+        </div>
+        <h3>Información Personal</h3>
+        <div>
+            <form name="formulario" method="get" action="procesar.html">
+                <p>
+                    <label>Nombre:</label><br>
+                    <input type="text" name="nombre" maxlength="15" id="nombre">
+                </p>
+                <p>
+                    <label>Contraseña:</label><br>
+                    <input type="password" name="clave" maxlength="15" id="clave">
+                </p>
+                <p>
+                    <label>Edad:</label><br>
+                    <input type="number" name="edad" min="13" max="100" id="edad">
+                </p>
+                <p>
+                    <label>Estructura:</label><br>
+                    <input type="range" name="estructura" min="50" max="300" id="estructura">
+                </p>
+                <p>
+                    <label>Correo Electrónico:</label><br>
+                    <input type="email" name="correo">
+                </p>
+                <p>
+                    <label>Teléfono:</label><br>
+                    <input type="tel" name="telefono" maxlength="15" id="telefono" placeholder="506-8705-4321">
+                </p>
+                <p>
+                    <label>Sitio web:</label><br>
+                    <input type="url" name="sitioweb">
+                </p>
+                <h3>Años de experiencia</h3>
+                <p>
+                    <label>Experiencia:</label><br>
+                    <input type="radio" name="experiencia" value="1"> 1 año
+                    <input type="radio" name="experiencia" value="2"> 2 año
+                    <input type="radio" name="experiencia" value="3"> 3 año
+                    <input type="radio" name="experiencia" value="mas de 3 años"> mas de 3 años
+                    
+                </p>
+            </form>
         </div>
     </main>
     <footer>
@@ -32,5 +72,4 @@
         <small>&copy;Derechos Reservados 2024</small>
     </footer>
 </body>
-
 </html>
