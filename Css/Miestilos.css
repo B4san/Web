@@ -56,16 +56,16 @@ body {
 }
 
 footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
+    background-color: #333;
+    color: white;
     text-align: center;
     padding: 10px;
+    height: 50px; /* Ajusta la altura según tus necesidades */
 }
-
 img {
     display: block;
     margin-left: auto;
@@ -93,3 +93,4 @@ tr:nth-child(even) {
 #contacto {
     margin-right: auto;
 }
+

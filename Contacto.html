@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="icon" href="imagenes/favicon.png" type="image/png" sizes="16x16">
     <link rel="stylesheet" href="Css/Miestilos.css">
 </head>
+
 <body>
     <div class="titulo">
         <header>
@@ -21,48 +23,74 @@
                 <a href="Videos.html">Videos | </a>
                 <a href="Contacto.html">Contacto </a>
             </nav>
-        </div>
-        <h3>Información Personal</h3>
-        <div>
-            <form name="formulario" method="get" action="procesar.html">
-                <p>
-                    <label>Nombre:</label><br>
-                    <input type="text" name="nombre" maxlength="15" id="nombre">
-                </p>
-                <p>
-                    <label>Contraseña:</label><br>
-                    <input type="password" name="clave" maxlength="15" id="clave">
-                </p>
-                <p>
-                    <label>Edad:</label><br>
-                    <input type="number" name="edad" min="13" max="100" id="edad">
-                </p>
-                <p>
-                    <label>Estructura:</label><br>
-                    <input type="range" name="estructura" min="50" max="300" id="estructura">
-                </p>
-                <p>
-                    <label>Correo Electrónico:</label><br>
-                    <input type="email" name="correo">
-                </p>
-                <p>
-                    <label>Teléfono:</label><br>
-                    <input type="tel" name="telefono" maxlength="15" id="telefono" placeholder="506-8705-4321">
-                </p>
-                <p>
-                    <label>Sitio web:</label><br>
-                    <input type="url" name="sitioweb">
-                </p>
-                <h3>Años de experiencia</h3>
-                <p>
-                    <label>Experiencia:</label><br>
-                    <input type="radio" name="experiencia" value="1"> 1 año
-                    <input type="radio" name="experiencia" value="2"> 2 año
-                    <input type="radio" name="experiencia" value="3"> 3 año
-                    <input type="radio" name="experiencia" value="mas de 3 años"> mas de 3 años
-                    
-                </p>
-            </form>
+            <div style="display: flex; justify-content: center;">
+            </div>
+            <h3>Información Personal</h3>
+            <div>
+                <form name="formulario" method="get" action="procesar.html">
+                    <p>
+                        <label>Nombre:</label><br>
+                        <input type="text" name="nombre" maxlength="15" id="nombre">
+                    </p>
+                    <p>
+                        <label>Contraseña:</label><br>
+                        <input type="password" name="clave" maxlength="15" id="clave">
+                    </p>
+                    <p>
+                        <label>Edad:</label><br>
+                        <input type="number" name="edad" min="13" max="100" id="edad">
+                    </p>
+                    <p>
+                        <label>Estructura:</label><br>
+                        <input type="range" name="estructura" min="50" max="300" id="estructura">
+                    </p>
+                    <p>
+                        <label>Correo Electrónico:</label><br>
+                        <input type="email" name="correo">
+                    </p>
+                    <p>
+                        <label>Teléfono:</label><br>
+                        <input type="tel" name="telefono" maxlength="15" id="telefono" placeholder="506-8705-4321">
+                    </p>
+                    <p>
+                        <label>Sitio web:</label><br>
+                        <input type="url" name="sitioweb">
+                    </p>
+                    <h3>Años de experiencia</h3>
+                    <p>
+                        <label>Experiencia:</label><br>
+                        <input type="radio" name="experiencia" value="1"> 1 año
+                        <input type="radio" name="experiencia" value="2"> 2 año
+                        <input type="radio" name="experiencia" value="3"> 3 año
+                        <input type="radio" name="experiencia" value="mas de 3 años"> mas de 3 años
+
+                    </p>
+                    <h3>Fecha de nacimiento</h3>
+                    <input id="calendario" type="date" name="fecha">
+                    <p>
+                        <div>
+                            <h3>color</h3>
+                            <input type="color" name="micolor" value="#998800">
+                        </div>
+                        <div>
+                            <p>
+                                <label>Texto: <textarea name="Texto" cols="50" rows="5"></textarea>"</label>
+                            </p>
+                        </div>
+                        <div>
+                        <label for="listado">Libros:</label>
+                        <select name="libro" id="listado">
+                            <option value="1">IT</option>
+                            <option value="2">Carrier</option>
+                            <option value="3">El Resplandor</option>
+                            <option value="4">Misery</option>
+                        </select>
+                        </div>  
+                        <div>
+                            <p><input type="submit" value="Enviar"></p>
+                        </div>
+                </form>
+            </div>
         </div>
     </main>
     <footer>
@@ -72,4 +100,23 @@
         <small>&copy;Derechos Reservados 2024</small>
     </footer>
 </body>
+
 </html>
+
+<script>
+    window.onload = function () {
+        var fecha = new Date();
+        var mes = fecha.getMonth() + 1;
+        var dia = fecha.getDate();
+        var año = fecha.getFullYear();
+        if (dia < 10)
+            dia = '0' + dia;
+        if (mes < 10)
+            mes = '0' + mes
+        document.getElementById('fechaActual').value = año + "-" + mes + "-" + dia;
+    }
+</script>
+
+<script>
+    document.getElementById("calendario").value = new Date().toISOString().substring(0, 10);
+</script>
